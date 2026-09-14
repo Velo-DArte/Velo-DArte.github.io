@@ -1,115 +1,177 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Velo D'Arte — unieke kunstobjecten waarin vintage fietsen, kunst, design en techniek samenkomen.">
+          content="Velo D'Arte — waar kunst en techniek samenkomen. Unieke kunstobjecten uit vintage fietsen.">
 
-    <title>Velo D'Arte | Waar kunst en techniek samenkomen</title>
+    <title>
+        Velo D'Arte | Waar kunst en techniek samenkomen
+    </title>
+
 
     <style>
 
+        /* ==================================================
+           VELO D'ARTE
+           BLACK & GOLD
+        ================================================== */
+
+
         :root {
-            --black: #080808;
-            --black-soft: #11110f;
-            --panel: #151512;
-            --gold: #b99a5b;
-            --gold-light: #d4bc82;
-            --cream: #e8e2d5;
-            --muted: #aaa49a;
-            --line: rgba(185,154,91,0.28);
+
+            --black: #070707;
+            --black2: #0d0d0d;
+            --black3: #141310;
+
+            --gold: #b9954f;
+            --gold-light: #d5bb7b;
+
+            --white: #f4f1e9;
+            --grey: #aaa69d;
+
+            --border: rgba(185,149,79,0.38);
+
         }
+
 
         * {
-            box-sizing: border-box;
+
             margin: 0;
             padding: 0;
+
+            box-sizing: border-box;
+
         }
+
 
         html {
+
             scroll-behavior: smooth;
+
         }
+
 
         body {
+
             background: var(--black);
-            color: var(--cream);
-            font-family: Arial, Helvetica, sans-serif;
+
+            color: var(--white);
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             line-height: 1.7;
+
         }
 
-        a {
-            color: inherit;
-        }
 
-        /* =========================
+        /* ==================================================
            HEADER
-        ========================= */
+        ================================================== */
+
 
         header {
+
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
 
-            background: rgba(8, 8, 8, 0.95);
+            height: 95px;
 
-            backdrop-filter: blur(12px);
+            background:
+                rgba(7,7,7,0.96);
 
-            border-bottom: 1px solid var(--line);
-
-            padding: 18px 6%;
+            border-bottom:
+                1px solid var(--border);
 
             display: flex;
+
             align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+        .header-inner {
+
+            width: 88%;
+
+            max-width: 1400px;
+
+            display: flex;
+
+            align-items: center;
+
             justify-content: space-between;
+
         }
 
-        .logo {
-            font-family: Georgia, "Times New Roman", serif;
 
-            font-size: 24px;
+        .header-logo {
 
-            letter-spacing: 4px;
+            height: 78px;
 
-            color: white;
+            width: auto;
+
         }
 
-        .logo span {
-            color: var(--gold);
-        }
 
         nav {
+
             display: flex;
-            gap: 28px;
+
+            gap: 35px;
+
+            align-items: center;
+
         }
 
+
         nav a {
+
+            color: var(--white);
+
             text-decoration: none;
-
-            color: #d8d3c9;
-
-            font-size: 13px;
-
-            letter-spacing: 1.5px;
 
             text-transform: uppercase;
 
-            transition: 0.2s;
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            transition: 0.3s;
+
         }
+
 
         nav a:hover {
+
             color: var(--gold-light);
+
         }
 
 
-        /* =========================
+
+        /* ==================================================
            HERO
-        ========================= */
+        ================================================== */
+
 
         .hero {
 
-            min-height: 88vh;
+            min-height: 85vh;
 
             display: flex;
 
@@ -120,153 +182,236 @@
             overflow: hidden;
 
             background:
+
                 radial-gradient(
-                    circle at 75% 40%,
-                    rgba(185,154,91,0.14),
+                    circle at 75% 45%,
+                    rgba(185,149,79,0.16),
                     transparent 30%
                 ),
 
                 linear-gradient(
                     120deg,
-                    #070707 0%,
-                    #0d0d0b 55%,
-                    #17130d 100%
+                    #050505,
+                    #0b0b0a 60%,
+                    #17120a
                 );
+
         }
 
-        .hero:after {
 
-            content: "";
+        .hero-inner {
 
-            position: absolute;
+            width: 88%;
 
-            width: 520px;
-            height: 520px;
+            max-width: 1400px;
 
-            right: -160px;
-            top: 18%;
+            margin: auto;
 
-            border: 1px solid rgba(185,154,91,0.18);
+            display: grid;
 
-            border-radius: 50%;
+            grid-template-columns:
+                1fr 1fr;
 
-            box-shadow:
-                0 0 0 40px rgba(185,154,91,0.025),
-                0 0 0 80px rgba(185,154,91,0.018);
+            align-items: center;
+
+            gap: 50px;
+
         }
 
-        .hero-content {
 
-            position: relative;
+        .hero-text {
 
-            z-index: 2;
+            max-width: 650px;
 
-            max-width: 900px;
-
-            padding: 100px 7%;
         }
+
 
         .eyebrow {
 
             color: var(--gold-light);
 
+            font-size: 11px;
+
+            letter-spacing: 6px;
+
             text-transform: uppercase;
 
-            letter-spacing: 5px;
-
-            font-size: 12px;
-
             margin-bottom: 25px;
+
         }
+
 
         .hero h1 {
 
-            font-family: Georgia, "Times New Roman", serif;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
-            font-size: clamp(55px, 9vw, 105px);
+            font-size:
+                clamp(50px,7vw,95px);
 
             font-weight: normal;
 
-            line-height: 0.95;
+            line-height: 1;
 
-            letter-spacing: 7px;
+            letter-spacing: 5px;
 
-            color: white;
         }
+
 
         .hero h1 span {
+
             color: var(--gold);
+
         }
+
 
         .hero h2 {
 
-            margin-top: 28px;
+            margin-top: 25px;
 
-            font-family: Georgia, "Times New Roman", serif;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
             font-weight: normal;
 
-            font-size: clamp(22px, 3vw, 34px);
+            font-size:
+                clamp(22px,3vw,34px);
 
-            color: #ddd5c5;
+            color: #ddd7ca;
+
         }
+
 
         .hero p {
 
-            max-width: 620px;
+            margin-top: 25px;
 
-            margin-top: 22px;
+            max-width: 600px;
 
-            color: var(--muted);
+            color: var(--grey);
 
-            font-size: 18px;
+            font-size: 17px;
+
         }
+
+
+        .gold-line {
+
+            width: 55px;
+
+            height: 1px;
+
+            background: var(--gold);
+
+            margin: 30px 0;
+
+        }
+
 
         .button {
 
             display: inline-block;
 
-            margin-top: 35px;
+            margin-top: 20px;
 
-            padding: 14px 28px;
+            padding:
+                14px
+                30px;
 
-            border: 1px solid var(--gold);
+            border:
+                1px solid var(--gold);
 
-            color: var(--gold-light);
+            color:
+                var(--gold-light);
 
             text-decoration: none;
 
             text-transform: uppercase;
 
-            letter-spacing: 2px;
+            font-size: 11px;
 
-            font-size: 12px;
+            letter-spacing: 3px;
 
-            transition: 0.25s;
+            transition: 0.3s;
+
         }
+
 
         .button:hover {
 
             background: var(--gold);
 
-            color: #080808;
+            color: #050505;
+
         }
 
 
-        /* =========================
+        /* ==================================================
+           HERO LOGO
+        ================================================== */
+
+
+        .hero-logo {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+        .hero-logo img {
+
+            width: 75%;
+
+            max-width: 480px;
+
+            filter:
+                drop-shadow(
+                    0 20px 40px
+                    rgba(0,0,0,0.7)
+                );
+
+        }
+
+
+
+        /* ==================================================
            GENERAL SECTIONS
-        ========================= */
+        ================================================== */
+
 
         section {
-            padding: 105px 7%;
+
+            padding:
+                110px 6%;
+
         }
 
-        .section-head {
 
-            max-width: 760px;
+        .section-inner {
+
+            max-width: 1400px;
+
+            margin: auto;
+
+        }
+
+
+        .section-title {
+
+            max-width: 750px;
 
             margin-bottom: 55px;
+
         }
+
 
         .section-label {
 
@@ -274,39 +419,66 @@
 
             text-transform: uppercase;
 
-            letter-spacing: 4px;
+            letter-spacing: 5px;
 
             font-size: 11px;
 
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+
         }
+
 
         h2 {
 
-            font-family: Georgia, "Times New Roman", serif;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
-            font-size: clamp(35px, 5vw, 58px);
+            font-size:
+                clamp(38px,5vw,60px);
 
             font-weight: normal;
 
             line-height: 1.1;
 
-            color: white;
         }
 
-        .section-head p {
 
-            color: var(--muted);
+        .section-title p {
 
             margin-top: 20px;
 
+            color: var(--grey);
+
             font-size: 17px;
+
         }
 
 
-        /* =========================
+
+        /* ==================================================
            RINATO
-        ========================= */
+        ================================================== */
+
+
+        #rinato {
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #090909,
+                    #10100e
+                );
+
+            border-top:
+                1px solid rgba(255,255,255,0.05);
+
+            border-bottom:
+                1px solid var(--border);
+
+        }
+
 
         .rinato-grid {
 
@@ -314,26 +486,32 @@
 
             grid-template-columns:
                 repeat(
-                    auto-fit,
-                    minmax(270px, 1fr)
+                    3,
+                    1fr
                 );
 
-            gap: 22px;
+            gap: 25px;
+
         }
+
 
         .rinato-card {
 
-            min-height: 330px;
+            min-height: 390px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border:
+                1px solid var(--border);
 
             background:
                 linear-gradient(
                     145deg,
-                    #171714,
-                    #0e0e0d
+                    #181714,
+                    #0b0b0a
                 );
-
-            border: 1px solid
-                rgba(185,154,91,0.22);
 
             padding: 30px;
 
@@ -343,307 +521,492 @@
 
             justify-content: flex-end;
 
-            position: relative;
-
-            overflow: hidden;
         }
 
-        .rinato-card:before {
+
+        .rinato-card::before {
 
             content: "";
 
             position: absolute;
 
-            inset: 16px;
+            inset: 15px;
 
-            border: 1px solid
-                rgba(185,154,91,0.10);
+            border:
+                1px solid
+                rgba(185,149,79,0.13);
+
         }
+
 
         .rinato-number {
 
-            color: var(--gold-light);
+            color:
+                var(--gold-light);
 
-            font-family: Georgia, serif;
+            font-family:
+                Georgia,
+                serif;
 
             font-size: 14px;
 
-            letter-spacing: 3px;
+            letter-spacing: 4px;
 
             position: relative;
+
         }
+
 
         .rinato-card h3 {
 
-            font-family: Georgia, serif;
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 30px;
 
             font-weight: normal;
 
-            font-size: 29px;
-
             margin-top: 8px;
 
             position: relative;
+
         }
+
 
         .rinato-card p {
 
-            color: var(--muted);
+            color: var(--grey);
 
             margin-top: 8px;
 
             position: relative;
+
         }
 
-        .status {
 
-            margin-top: 20px;
+        .status {
 
             color: var(--gold);
 
             text-transform: uppercase;
 
-            letter-spacing: 2px;
-
             font-size: 10px;
 
+            letter-spacing: 3px;
+
+            margin-top: 20px;
+
             position: relative;
+
         }
 
 
-        /* =========================
-           EIGEN FIETS
-        ========================= */
+
+        /* ==================================================
+           PERSONAL PROJECT
+        ================================================== */
+
+
+        #jouw-fiets {
+
+            background: #080808;
+
+        }
+
 
         .personal {
 
-            background:
-                linear-gradient(
-                    rgba(8,8,8,0.94),
-                    rgba(8,8,8,0.98)
-                ),
-
-                radial-gradient(
-                    circle at 80% 30%,
-                    rgba(185,154,91,0.16),
-                    transparent 35%
-                );
-
-            border-top: 1px solid var(--line);
-
-            border-bottom: 1px solid var(--line);
-        }
-
-        .personal-grid {
-
             display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns:
+                1fr 1fr;
 
             gap: 80px;
 
             align-items: center;
+
         }
 
-        .personal-copy p {
 
-            color: var(--muted);
+        .personal-text p {
+
+            color: var(--grey);
 
             font-size: 17px;
 
             margin-top: 20px;
+
         }
+
 
         .steps {
 
-            margin-top: 30px;
+            border-left:
+                1px solid var(--border);
+
+            padding-left: 35px;
+
         }
+
 
         .step {
 
-            display: flex;
-
-            gap: 18px;
-
-            padding: 17px 0;
+            padding:
+                22px 0;
 
             border-bottom:
                 1px solid
                 rgba(255,255,255,0.08);
+
+            display: flex;
+
+            gap: 20px;
+
         }
+
 
         .step-number {
 
             color: var(--gold);
 
-            font-family: Georgia, serif;
+            font-family:
+                Georgia,
+                serif;
 
-            font-size: 20px;
+            font-size: 22px;
+
         }
+
 
         .step strong {
 
             display: block;
 
-            color: white;
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 19px;
 
             font-weight: normal;
+
         }
+
 
         .step span {
 
-            color: var(--muted);
+            color: var(--grey);
 
             font-size: 14px;
+
         }
 
 
-        /* =========================
+
+        /* ==================================================
            VISIE
-        ========================= */
+        ================================================== */
 
-        .signature {
 
-            border: 1px solid var(--line);
+        #visie {
 
-            padding: 55px 40px;
+            background:
+                #11110f;
+
+            border-top:
+                1px solid var(--border);
+
+            border-bottom:
+                1px solid var(--border);
+
+        }
+
+
+        .vision {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+
+        }
+
+
+        .vision-box {
+
+            border:
+                1px solid var(--border);
+
+            min-height: 380px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
 
             text-align: center;
 
-            background: #0d0d0b;
+            padding: 50px;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(185,149,79,0.08),
+                    transparent 60%
+                );
+
         }
 
-        .signature-mark {
 
-            font-family: Georgia, serif;
+        .vision-mark {
 
-            font-size: 65px;
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 90px;
 
             color: var(--gold);
 
             line-height: 1;
 
-            margin-bottom: 18px;
         }
 
-        .signature h3 {
 
-            font-family: Georgia, serif;
+        .vision-box h3 {
 
-            font-size: 30px;
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 32px;
 
             font-weight: normal;
+
+            margin-top: 20px;
+
         }
 
-        .signature p {
 
-            color: var(--muted);
+        .vision-box p {
+
+            color: var(--grey);
 
             margin-top: 15px;
+
         }
 
-        .about {
 
-            max-width: 900px;
+        .vision-text p {
+
+            color: var(--grey);
+
+            font-size: 17px;
+
+            margin-top: 20px;
+
+        }
+
+
+
+        /* ==================================================
+           CONTACT
+        ================================================== */
+
+
+        #contact {
+
+            text-align: center;
+
+            background: #090909;
+
+        }
+
+
+        .contact-inner {
+
+            max-width: 800px;
 
             margin: auto;
 
-            text-align: center;
-        }
-
-        .about p {
-
-            color: var(--muted);
-
-            font-size: 18px;
-
-            margin-top: 22px;
         }
 
 
-        /* =========================
-           CONTACT
-        ========================= */
+        .contact-inner p {
 
-        .contact {
+            color: var(--grey);
 
-            text-align: center;
+            margin-top: 20px;
 
-            background: #0d0d0b;
+            font-size: 17px;
 
-            border-top: 1px solid var(--line);
         }
 
-        .contact p {
-
-            max-width: 650px;
-
-            margin: 20px auto 0;
-
-            color: var(--muted);
-        }
 
         .email {
 
             display: inline-block;
 
-            margin-top: 25px;
+            margin-top: 30px;
 
-            color: var(--gold-light);
+            color:
+                var(--gold-light);
 
-            font-family: Georgia, serif;
+            font-family:
+                Georgia,
+                serif;
 
-            font-size: 22px;
+            font-size: 24px;
 
             text-decoration: none;
+
         }
 
 
-        /* =========================
+        .email:hover {
+
+            color: white;
+
+        }
+
+
+
+        /* ==================================================
            FOOTER
-        ========================= */
+        ================================================== */
+
 
         footer {
 
-            padding: 35px 7%;
+            border-top:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            padding:
+                35px 6%;
+
+            color: #777;
+
+            font-size: 12px;
+
+        }
+
+
+        .footer-inner {
+
+            max-width: 1400px;
+
+            margin: auto;
 
             display: flex;
 
             justify-content: space-between;
 
-            gap: 20px;
-
-            color: #77736b;
-
-            font-size: 12px;
-
-            border-top:
-                1px solid
-                rgba(255,255,255,0.06);
         }
+
 
         footer strong {
 
             color: var(--gold);
 
             font-weight: normal;
+
         }
 
 
-        /* =========================
-           MOBILE
-        ========================= */
 
-        @media (max-width: 760px) {
+        /* ==================================================
+           MOBILE
+        ================================================== */
+
+
+        @media(max-width:900px) {
+
+            .hero-inner {
+
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+            }
+
+
+            .hero-text {
+
+                margin: auto;
+
+            }
+
+
+            .gold-line {
+
+                margin:
+                    30px auto;
+
+            }
+
+
+            .hero-logo img {
+
+                width: 55%;
+
+            }
+
+
+            .rinato-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .personal,
+            .vision {
+
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+
+            }
+
+        }
+
+
+        @media(max-width:650px) {
 
             header {
 
-                padding: 15px 5%;
+                height: auto;
+
+                padding:
+                    12px 5%;
+
+            }
+
+
+            .header-inner {
 
                 flex-direction: column;
 
-                gap: 12px;
+                gap: 10px;
+
             }
+
+
+            .header-logo {
+
+                height: 65px;
+
+            }
+
 
             nav {
 
@@ -652,343 +1015,292 @@
                 flex-wrap: wrap;
 
                 justify-content: center;
+
             }
+
 
             nav a {
 
-                font-size: 10px;
+                font-size: 9px;
+
+                letter-spacing: 1px;
+
             }
 
-            .hero-content {
 
-                padding: 80px 7%;
+            .hero {
+
+                min-height: 90vh;
+
             }
+
+
+            .hero-logo img {
+
+                width: 70%;
+
+            }
+
 
             section {
 
-                padding: 75px 7%;
+                padding:
+                    75px 7%;
+
             }
 
-            .personal-grid {
 
-                grid-template-columns: 1fr;
+            .steps {
 
-                gap: 40px;
+                padding-left: 20px;
+
             }
 
-            footer {
+
+            .footer-inner {
 
                 flex-direction: column;
 
                 text-align: center;
+
+                gap: 10px;
+
             }
+
         }
 
     </style>
+
 </head>
+
 
 
 <body>
 
 
-<!-- =========================
+
+<!-- ==================================================
      HEADER
-========================= -->
+================================================== -->
+
 
 <header>
 
-    <div class="logo">
-        VELO <span>D'ARTE</span>
+    <div class="header-inner">
+
+        <img
+            src="logo.png"
+            alt="Velo D'Arte"
+            class="header-logo"
+        >
+
+
+        <nav>
+
+            <a href="#rinato">
+                Rinato
+            </a>
+
+            <a href="#jouw-fiets">
+                Jouw fiets
+            </a>
+
+            <a href="#visie">
+                Visie
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
     </div>
-
-    <nav>
-
-        <a href="#rinato">
-            Rinato
-        </a>
-
-        <a href="#eigen-fiets">
-            Jouw fiets
-        </a>
-
-        <a href="#visie">
-            Visie
-        </a>
-
-        <a href="#contact">
-            Contact
-        </a>
-
-    </nav>
 
 </header>
 
 
 
-<main>
-
-
-<!-- =========================
+<!-- ==================================================
      HERO
-========================= -->
+================================================== -->
+
 
 <section class="hero">
 
-    <div class="hero-content">
-
-        <div class="eyebrow">
-            Art · Design · Cycling
-        </div>
-
-        <h1>
-            VELO <span>D'ARTE</span>
-        </h1>
-
-        <h2>
-            Waar kunst en techniek samenkomen.
-        </h2>
-
-        <p>
-            Vintage fietsen vormen het vertrekpunt
-            voor unieke kunstobjecten.
-            Elke creatie krijgt een eigen karakter,
-            een eigen verhaal en een eigen
-            Velo D'Arte-touch.
-        </p>
-
-        <a
-            class="button"
-            href="#rinato"
-        >
-            Ontdek Rinato
-        </a>
-
-    </div>
-
-</section>
+    <div class="hero-inner">
 
 
+        <div class="hero-text">
 
-<!-- =========================
-     RINATO
-========================= -->
-
-<section id="rinato">
-
-    <div class="section-head">
-
-        <div class="section-label">
-            De collectie
-        </div>
-
-        <h2>
-            Rinato
-        </h2>
-
-        <p>
-            Iedere Velo D'Arte-creatie krijgt
-            een eigen nummer.
-            Rinato betekent opnieuw geboren.
-            Geen twee creaties zijn hetzelfde.
-        </p>
-
-    </div>
-
-
-    <div class="rinato-grid">
-
-
-        <article class="rinato-card">
-
-            <div class="rinato-number">
-                RINATO #001
+            <div class="eyebrow">
+                Art · Design · Cycling
             </div>
 
-            <h3>
-                Een nieuw verhaal
-            </h3>
 
-            <p>
-                Unieke creatie uit een
-                vintage stadsfiets.
-            </p>
+            <h1>
+                VELO <span>D'ARTE</span>
+            </h1>
 
-            <div class="status">
-                Binnenkort
-            </div>
-
-        </article>
-
-
-
-        <article class="rinato-card">
-
-            <div class="rinato-number">
-                RINATO #002
-            </div>
-
-            <h3>
-                Karakter & vorm
-            </h3>
-
-            <p>
-                Een retro koersfiets met
-                een eigen design-toets.
-            </p>
-
-            <div class="status">
-                Binnenkort
-            </div>
-
-        </article>
-
-
-
-        <article class="rinato-card">
-
-            <div class="rinato-number">
-                RINATO #003
-            </div>
-
-            <h3>
-                Wordt vervolgd
-            </h3>
-
-            <p>
-                Elke volgende creatie krijgt
-                haar eigen identiteit.
-            </p>
-
-            <div class="status">
-                Binnenkort
-            </div>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     EIGEN FIETS
-========================= -->
-
-<section
-    class="personal"
-    id="eigen-fiets"
->
-
-    <div class="personal-grid">
-
-
-        <div class="personal-copy">
-
-            <div class="section-label">
-                Een persoonlijke creatie
-            </div>
 
             <h2>
-                Heeft jouw fiets
-                een verhaal?
+                Waar kunst en techniek samenkomen.
             </h2>
 
-            <p>
-                Misschien staat er bij jou nog
-                een oude fiets die te bijzonder is
-                om zomaar weg te doen.
-            </p>
+
+            <div class="gold-line"></div>
+
 
             <p>
-                Die fiets kan het vertrekpunt worden
-                voor een uniek Velo D'Arte-kunstobject.
-                Jij brengt het verhaal.
-                Velo D'Arte geeft het een nieuwe vorm
-                en een eigen karakter.
+
+                Vintage fietsen vormen het vertrekpunt
+                voor unieke kunstobjecten.
+
+                Elke creatie krijgt een eigen karakter,
+                een eigen verhaal en een herkenbare
+                Velo D'Arte-touch.
+
             </p>
+
 
             <a
+                href="#rinato"
                 class="button"
-                href="mailto:velo-dart@telenet.be?subject=Mijn fiets voor Velo D'Arte"
             >
-                Vertel ons over jouw fiets
+                Ontdek Rinato
             </a>
 
         </div>
 
 
 
-        <div class="steps">
+        <div class="hero-logo">
+
+            <img
+                src="logo.png"
+                alt="Velo D'Arte Rinato"
+            >
+
+        </div>
 
 
-            <div class="step">
+    </div>
 
-                <div class="step-number">
-                    01
-                </div>
+</section>
 
-                <div>
 
-                    <strong>
-                        Vertel ons over je fiets
-                    </strong>
 
-                    <span>
-                        Stuur een mail met foto's
-                        en het verhaal achter de fiets.
-                    </span>
+<!-- ==================================================
+     RINATO
+================================================== -->
 
-                </div>
 
+<section id="rinato">
+
+    <div class="section-inner">
+
+
+        <div class="section-title">
+
+            <div class="section-label">
+                De collectie
             </div>
 
 
+            <h2>
+                Rinato
+            </h2>
 
-            <div class="step">
 
-                <div class="step-number">
-                    02
+            <p>
+
+                Iedere Velo D'Arte-creatie krijgt
+                een eigen nummer.
+
+                <br><br>
+
+                <strong>
+                    Rinato
+                </strong>
+                betekent opnieuw geboren.
+
+                Geen twee creaties zijn hetzelfde.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="rinato-grid">
+
+
+            <article class="rinato-card">
+
+                <div class="rinato-number">
+                    RINATO #001
                 </div>
 
-                <div>
+                <h3>
+                    Een nieuw verhaal
+                </h3>
 
-                    <strong>
-                        We bekijken het concept
-                    </strong>
+                <p>
+                    Een unieke creatie uit
+                    een vintage stadsfiets.
+                </p>
 
-                    <span>
-                        De fiets wordt het uitgangspunt
-                        voor een unieke creatie.
-                    </span>
-
+                <div class="status">
+                    Binnenkort
                 </div>
 
-            </div>
+            </article>
 
 
 
-            <div class="step">
+            <article class="rinato-card">
 
-                <div class="step-number">
-                    03
+                <div class="rinato-number">
+                    RINATO #002
                 </div>
 
-                <div>
+                <h3>
+                    Karakter & vorm
+                </h3>
 
-                    <strong>
-                        De Velo D'Arte-touch
-                    </strong>
+                <p>
+                    Een retro koersfiets met
+                    een uitgesproken design-toets.
+                </p>
 
-                    <span>
-                        Vorm, materiaal, kleur en design
-                        komen samen.
-                    </span>
-
+                <div class="status">
+                    Binnenkort
                 </div>
 
-            </div>
+            </article>
+
+
+
+            <article class="rinato-card">
+
+                <div class="rinato-number">
+                    RINATO #003
+                </div>
+
+                <h3>
+                    Wordt vervolgd
+                </h3>
+
+                <p>
+                    De volgende creatie krijgt
+                    opnieuw een eigen identiteit.
+                </p>
+
+                <div class="status">
+                    Binnenkort
+                </div>
+
+            </article>
 
 
         </div>
@@ -999,62 +1311,224 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
+     EIGEN FIETS
+================================================== -->
+
+
+<section id="jouw-fiets">
+
+    <div class="section-inner">
+
+
+        <div class="personal">
+
+
+            <div class="personal-text">
+
+                <div class="section-label">
+                    Een persoonlijke creatie
+                </div>
+
+
+                <h2>
+                    Heeft jouw fiets
+                    een verhaal?
+                </h2>
+
+
+                <p>
+
+                    Misschien staat er bij jou nog
+                    een oude fiets die te bijzonder
+                    is om zomaar weg te doen.
+
+                </p>
+
+
+                <p>
+
+                    Die fiets kan het vertrekpunt
+                    worden voor een uniek Velo D'Arte
+                    kunstobject.
+
+                    Jij brengt het verhaal.
+
+                    Wij geven het een nieuwe vorm,
+                    een nieuw karakter en de
+                    Velo D'Arte-touch.
+
+                </p>
+
+
+                <a
+                    class="button"
+                    href="mailto:velo-dart@telenet.be?subject=Mijn fiets voor Velo D'Arte"
+                >
+                    Vertel ons over jouw fiets
+                </a>
+
+            </div>
+
+
+
+            <div class="steps">
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Vertel ons over je fiets
+                        </strong>
+
+                        <span>
+                            Stuur een mail met foto's
+                            en het verhaal achter de fiets.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            We bekijken het idee
+                        </strong>
+
+                        <span>
+                            Samen bekijken we de mogelijkheden
+                            van jouw fiets als kunstobject.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            De Velo D'Arte-touch
+                        </strong>
+
+                        <span>
+                            Vorm, materiaal, kleur en design
+                            komen samen in één unieke creatie.
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
      VISIE
-========================= -->
+================================================== -->
+
 
 <section id="visie">
 
-    <div class="personal-grid">
+    <div class="section-inner">
 
 
-        <div class="signature">
+        <div class="vision">
 
-            <div class="signature-mark">
-                R
+
+            <div class="vision-box">
+
+                <div class="vision-mark">
+                    R
+                </div>
+
+
+                <h3>
+                    RINATO
+                </h3>
+
+
+                <p>
+                    Opnieuw geboren.
+                    <br>
+                    Opnieuw bekeken.
+                    <br>
+                    Opnieuw beleefd.
+                </p>
+
             </div>
 
-            <h3>
-                Rinato
-            </h3>
-
-            <p>
-                Opnieuw geboren.
-                Opnieuw bekeken.
-                Opnieuw beleefd.
-            </p>
-
-        </div>
 
 
+            <div class="vision-text">
 
-        <div class="about">
+                <div class="section-label">
+                    De Velo D'Arte-visie
+                </div>
 
-            <div class="section-label">
-                De Velo D'Arte-visie
+
+                <h2>
+                    Geen gewone fietsen.
+                    Kunstobjecten.
+                </h2>
+
+
+                <p>
+
+                    Velo D'Arte maakt unieke
+                    kunstobjecten waarin de geschiedenis
+                    van een fiets wordt gecombineerd
+                    met een hedendaagse designvisie.
+
+                </p>
+
+
+                <p>
+
+                    Vintage stadsfietsen en retro
+                    koersfietsen zijn het materiaal,
+                    het verhaal en de inspiratie.
+
+                    Het resultaat is een object met
+                    een eigen identiteit.
+
+                </p>
+
+
             </div>
 
-            <h2>
-                Geen gewone fietsen.
-            </h2>
-
-            <p>
-                Velo D'Arte maakt unieke kunstobjecten
-                waarin de geschiedenis van een fiets
-                wordt gecombineerd met een hedendaagse
-                designvisie.
-            </p>
-
-            <p>
-                Vintage stadsfietsen en retro koersfietsen
-                zijn het materiaal, het verhaal en
-                de inspiratie.
-                Het resultaat is een object met
-                een eigen identiteit.
-            </p>
 
         </div>
-
 
     </div>
 
@@ -1062,57 +1536,87 @@
 
 
 
-<!-- =========================
+<!-- ==================================================
      CONTACT
-========================= -->
+================================================== -->
 
-<section
-    class="contact"
-    id="contact"
->
 
-    <div class="section-label">
-        Contact
+<section id="contact">
+
+    <div class="contact-inner">
+
+
+        <div class="section-label">
+            Contact
+        </div>
+
+
+        <h2>
+            Een idee,
+            een fiets,
+            een verhaal?
+        </h2>
+
+
+        <p>
+
+            Wil je meer weten over een Rinato-creatie
+            of wil je jouw eigen fiets voorstellen?
+
+            Neem dan contact op via e-mail.
+
+        </p>
+
+
+        <a
+            class="email"
+            href="mailto:velo-dart@telenet.be"
+        >
+            velo-dart@telenet.be
+        </a>
+
+
     </div>
-
-    <h2>
-        Een idee, een fiets,
-        een verhaal?
-    </h2>
-
-    <p>
-        Voor informatie over een Rinato-creatie
-        of om jouw eigen fiets voor te stellen,
-        neem je contact met ons op via e-mail.
-    </p>
-
-    <a
-        class="email"
-        href="mailto:velo-dart@telenet.be"
-    >
-        velo-dart@telenet.be
-    </a>
 
 </section>
 
 
-</main>
 
-
-
-<!-- =========================
+<!-- ==================================================
      FOOTER
-========================= -->
+================================================== -->
+
 
 <footer>
 
-    <div>
-        © 2026
-        <strong>Velo D'Arte</strong>
-    </div>
+    <div class="footer-inner">
 
-    <div>
-        Waar kunst en techniek samenkomen.
+        <div>
+
+            © 2026
+            <strong>
+                Velo D'Arte
+            </strong>
+
+            &nbsp; | &nbsp;
+
+            Vlaanderen
+
+        </div>
+
+
+        <div>
+
+            Waar kunst en techniek samenkomen.
+
+        </div>
+
     </div>
 
 </footer>
+
+
+
+</body>
+
+</html>
