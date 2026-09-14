@@ -3,92 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velo D'Arte | Gerenoveerde fietsen</title>
+
+    <title>Velo D'Arte | Fietsen met een tweede leven</title>
+
+    <meta name="description"
+          content="Velo D'Arte geeft karaktervolle fietsen een tweede leven. Ontdek onze gerenoveerde fietsen.">
 
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #222;
-            background: #f7f5f0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #20201d;
+            background: #f5f2eb;
+            line-height: 1.6;
         }
 
         header {
-            background: #1f1f1f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #20201d;
             color: white;
-            padding: 22px 8%;
+            padding: 18px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 25px;
             font-weight: bold;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             margin-left: 25px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #d69a72;
         }
 
         .hero {
-            min-height: 70vh;
+            min-height: 78vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px;
+            background:
+                linear-gradient(rgba(32,32,29,0.55), rgba(32,32,29,0.55)),
+                url("https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1800&q=85")
+                center / cover;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
         }
 
         .hero h1 {
-            font-size: 58px;
+            font-size: clamp(45px, 8vw, 82px);
+            letter-spacing: 6px;
             margin-bottom: 15px;
         }
 
         .hero p {
-            font-size: 22px;
+            font-size: clamp(20px, 3vw, 28px);
             margin-bottom: 35px;
         }
 
         .button {
             display: inline-block;
-            padding: 15px 28px;
-            background: #b54a32;
+            padding: 15px 30px;
+            background: #b75c3c;
             color: white;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 3px;
             font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: #91452d;
+            transform: translateY(-2px);
         }
 
         .section {
-            padding: 70px 8%;
+            padding: 85px 7%;
             text-align: center;
         }
 
         .section h2 {
-            font-size: 36px;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            max-width: 750px;
+            margin: 0 auto 45px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .bikes {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
         }
 
         .bike {
-            max-width: 900px;
-            margin: 40px auto;
             background: white;
-            padding: 30px;
             border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        .bike img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .bike-content {
+            padding: 25px;
+        }
+
+        .bike h3 {
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            font-size: 21px;
+            font-weight: bold;
+            color: #b75c3c;
+            margin-top: 12px;
+        }
+
+        .about {
+            background: #e7e1d6;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        .contact {
+            background: #20201d;
+            color: white;
+        }
+
+        .contact p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+            font-size: 18px;
         }
 
         footer {
-            background: #1f1f1f;
-            color: white;
+            background: #151513;
+            color: #aaa;
             text-align: center;
-            padding: 30px;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            .hero {
+                min-height: 70vh;
+            }
+
+            .section {
+                padding: 60px 6%;
+            }
         }
     </style>
 </head>
@@ -96,7 +210,10 @@
 <body>
 
 <header>
-    <div class="logo">VELO D'ARTE</div>
+
+    <div class="logo">
+        VELO D'ARTE
+    </div>
 
     <nav>
         <a href="#home">Home</a>
@@ -104,53 +221,167 @@
         <a href="#over">Over ons</a>
         <a href="#contact">Contact</a>
     </nav>
+
 </header>
 
+
 <section class="hero" id="home">
-    <div>
+
+    <div class="hero-content">
+
         <h1>VELO D'ARTE</h1>
-        <p>Gerenoveerde fietsen met karakter.</p>
-        <a class="button" href="#fietsen">Bekijk onze fietsen</a>
+
+        <p>
+            Fietsen met karakter.<br>
+            Een tweede leven, met zorg gegeven.
+        </p>
+
+        <a class="button" href="#fietsen">
+            Ontdek onze fietsen
+        </a>
+
     </div>
+
 </section>
+
 
 <section class="section" id="fietsen">
-    <h2>Fietsen te koop</h2>
 
-    <div class="bike">
-        <h3>Binnenkort beschikbaar</h3>
-        <p>
-            Ontdek binnenkort onze zorgvuldig gerenoveerde fietsen.
-            Elke fiets krijgt bij Velo D'Arte een tweede leven.
-        </p>
-    </div>
-</section>
+    <h2>Onze fietsen</h2>
 
-<section class="section" id="over">
-    <h2>Over Velo D'Arte</h2>
-
-    <p>
-        Bij Velo D'Arte geven we karaktervolle fietsen een tweede leven.
-        Elke fiets wordt met zorg nagekeken en gerenoveerd,
-        zodat hij klaar is voor een nieuwe eigenaar.
+    <p class="intro">
+        Elke fiets bij Velo D'Arte wordt zorgvuldig nagekeken,
+        opgefrist en klaargemaakt voor een nieuw avontuur.
     </p>
+
+
+    <div class="bikes">
+
+        <div class="bike">
+
+            <img
+                src="https://images.unsplash.com/photo-1502744688674-c619d1586c9e?auto=format&fit=crop&w=900&q=80"
+                alt="Gerenoveerde fiets">
+
+            <div class="bike-content">
+
+                <h3>Binnenkort beschikbaar</h3>
+
+                <p>
+                    Onze eerste fietsen komen binnenkort online.
+                </p>
+
+                <div class="price">
+                    Binnenkort
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="bike">
+
+            <img
+                src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=80"
+                alt="Vintage fiets">
+
+            <div class="bike-content">
+
+                <h3>Met karakter</h3>
+
+                <p>
+                    Karaktervolle fietsen die klaar zijn
+                    voor een tweede leven.
+                </p>
+
+                <div class="price">
+                    Binnenkort
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="bike">
+
+            <img
+                src="https://images.unsplash.com/photo-1529429617124-aee711a3e7e4?auto=format&fit=crop&w=900&q=80"
+                alt="Fiets voor dagelijks gebruik">
+
+            <div class="bike-content">
+
+                <h3>Klaar voor onderweg</h3>
+
+                <p>
+                    Met zorg gerenoveerd en klaar voor
+                    vele nieuwe kilometers.
+                </p>
+
+                <div class="price">
+                    Binnenkort
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section class="section" id="contact">
-    <h2>Interesse?</h2>
+
+<section class="section about" id="over">
+
+    <div class="about-content">
+
+        <h2>Over Velo D'Arte</h2>
+
+        <p>
+            Bij Velo D'Arte geloven we dat een goede fiets
+            meer is dan een vervoermiddel.
+        </p>
+
+        <br>
+
+        <p>
+            Daarom geven we karaktervolle fietsen een tweede leven.
+            We zoeken fietsen met potentieel, knappen ze zorgvuldig
+            op en maken ze opnieuw klaar voor de weg.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>Oude fiets. Nieuw verhaal.</strong>
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section contact" id="contact">
+
+    <h2>Een fiets gezien?</h2>
 
     <p>
-        Heb je interesse in een van onze fietsen?
+        Heb je interesse in een fiets of wil je meer weten?
         Neem gerust contact met ons op.
     </p>
 
     <a class="button" href="mailto:info@velodarte.be">
         Neem contact op
     </a>
+
 </section>
 
+
 <footer>
-    © 2026 Velo D'Arte — Gerenoveerde fietsen
+
+    © 2026 Velo D'Arte — Fietsen met karakter
+
 </footer>
 
 </body>
